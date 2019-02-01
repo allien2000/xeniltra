@@ -26,7 +26,7 @@ def BomEmail():
     else:
         os.system('clear')
 
-server = raw_input ('MailServer 1.Gmail/2.Yahoo: ')
+server = raw_input ('MailServer 1.Gmail/2.Yahoo/3.hotmail: ')
 user = raw_input('Email: ')
 passwd = getpass.getpass('Password: ')
 
@@ -42,8 +42,11 @@ if server == 'gmail' or '1' or 'Gmail':
 elif server == 'yahoo' or '2' or 'Yahoo':
     smtp_server = 'smtp.mail.yahoo.com'
     port = 25
+   lif server == 'Hotmail or '3' or 'Hotmail':
+    smtp_server = 'smtp.live.com'
+    port = 587
 else:
-    print 'Kindly Enter Your Answer in 1 or 2 in Mail Server.'
+    print 'Kindly Enter Your Answer in 1 or 2 or 3 in Mail Server.'
     sys.exit()
 
 print ''
